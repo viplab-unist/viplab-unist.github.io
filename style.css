@@ -5,17 +5,17 @@ body {
   color: #222;
 }
 
-/* Header bar */
+/* Header */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  border-bottom: 1px solid #ddd;
-  background-color: #fff;
+  background-color: #0a1e50; /* UNIST deep blue */
+  color: #fff;
 }
 
-/* Logo + title */
+/* Logo section */
 .logo-section {
   display: flex;
   align-items: center;
@@ -23,39 +23,67 @@ body {
 }
 
 .logo {
-  height: 60px;
+  height: 50px;
 }
 
 .lab-name h1 {
-  font-size: 1.2rem;
-  color: #002c5f;
+  font-size: 1.3rem;
+  color: #fff;
   margin: 0;
 }
 
-.lab-name h2 {
-  font-size: 0.95rem;
-  color: #1b3b6f;
-  margin: 0;
-  font-weight: normal;
-}
-
-/* Navigation menu */
+/* Menu */
 .menu ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
 
 .menu a {
   text-decoration: none;
-  color: #111;
+  color: #fff;
   font-weight: 500;
+  padding: 8px;
 }
 
 .menu a:hover {
-  color: #0056b3;
+  color: #8fc9ff;
+}
+
+/* Dropdown structure */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+  border-radius: 4px;
+  padding: 8px 0;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #222;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Hover effect to show dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Main content */
@@ -63,4 +91,3 @@ main {
   text-align: center;
   padding: 100px 20px;
 }
-📁 파일 구조 예시
