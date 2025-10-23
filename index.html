@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VIP Lab @ UNIST</title>
+  <title>UNIST VIP Lab</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,26 +11,46 @@
     <div class="logo-section">
       <img src="images/unist_logo.png" alt="UNIST Logo" class="logo">
       <div class="lab-name">
-        <h1>Visual Information Processing Lab.</h1>
-        <h2>유니스트 시각정보처리 연구실</h2>
+        <h1>UNIST VIP Lab</h1>
       </div>
     </div>
 
     <nav class="menu">
       <ul>
-        <li><a href="people.html">People</a></li>
-        <li><a href="research.html">Research</a></li>
+        <li class="dropdown">
+          <a href="#">People ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="professor.html">Professor</a></li>
+            <li><a href="members.html">Members</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Research ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="research_topics.html">Topics</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+        </li>
+
         <li><a href="publications.html">Publications</a></li>
         <li><a href="lectures.html">Lectures</a></li>
-        <li><a href="board.html">Board</a></li>
+
+        <li class="dropdown">
+          <a href="#">Board ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="notices.html">Notices</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="welcome">
-      <h3>Welcome to the VIP Lab!</h3>
-      <p>We conduct research on computer vision, AI, and pattern analysis at UNIST.</p>
+      <h3>Welcome to the UNIST Visual Information Processing Lab</h3>
+      <p>We focus on AI, computer vision, and pattern analysis research at UNIST.</p>
     </section>
   </main>
 </body>
