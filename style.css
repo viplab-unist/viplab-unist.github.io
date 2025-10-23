@@ -13,6 +13,8 @@ body {
   padding: 15px 50px;
   background-color: #0a1e50; /* UNIST deep blue */
   color: #fff;
+  position: relative;
+  z-index: 100;
 }
 
 /* Logo section */
@@ -41,11 +43,16 @@ body {
   padding: 0;
 }
 
+.menu li {
+  position: relative;
+}
+
 .menu a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
   padding: 8px;
+  display: block;
 }
 
 .menu a:hover {
@@ -53,28 +60,26 @@ body {
 }
 
 /* Dropdown structure */
-.dropdown {
-  position: relative;
-}
-
 .dropdown-content {
-  display: none;
+  display: none; /* 항상 닫힌 상태로 시작 */
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
+  background-color: #fff;
   min-width: 160px;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-  z-index: 10;
   border-radius: 4px;
   padding: 8px 0;
+  z-index: 999;
 }
 
+/* 내부 링크 스타일 */
 .dropdown-content a {
   display: block;
   color: #222;
   padding: 10px 15px;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .dropdown-content a:hover {
@@ -82,8 +87,14 @@ body {
 }
 
 /* Hover effect to show dropdown */
-.dropdown:hover .dropdown-content {
+.dropdown:hover > .dropdown-content {
   display: block;
+}
+
+/* Prevent always-open bug: only trigger when hovering parent li */
+.menu li:hover > a,
+.menu li:hover > .dropdown-content {
+  color: #8fc9ff;
 }
 
 /* Main content */
