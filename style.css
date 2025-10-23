@@ -102,3 +102,23 @@ main {
   text-align: center;
   padding: 100px 20px;
 }
+
+
+/* Override fixes for dropdown staying open */
+.dropdown-content {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.dropdown:hover > .dropdown-content {
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Force background white */
+body {
+  background-color: #ffffff !important;
+}
