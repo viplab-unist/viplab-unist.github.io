@@ -431,3 +431,10 @@ Reviewer of Samsung Tech. Conference by Samsung Electronics Co. 2008</td>
 </tbody>
 </table>
 <p>{:}</p>
+
+<div id="header-placeholder"></div>
+<script>
+  fetch("/components/header.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
