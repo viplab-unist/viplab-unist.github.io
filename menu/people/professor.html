@@ -1,4 +1,13 @@
 <link rel="stylesheet" href="../../style.css">
+
+<div id="header-placeholder"></div>
+<script>
+  fetch("../../components/header.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("header-placeholder").innerHTML = data);
+</script>
+
+
 <html lang="en">
 <table class="profile" style="border: 0;">
 <tbody>
@@ -220,9 +229,4 @@ Reviewer of Samsung Tech. Conference by Samsung Electronics Co. 2008</td>
 </table>
 
 
-<div id="header-placeholder"></div>
-<script>
-  fetch("../../components/header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header-placeholder").innerHTML = data);
-</script>
+
